@@ -7,7 +7,6 @@ export const getContactsFromAPI = async () => {
     try {
         const res = await fetch(`${API_BASE}/agendas/${AGENDA_SLUG}/contacts`);
         const data = await res.json();
-        // La API devuelve { contacts: [...] }
         return Array.isArray(data) ? data : data.contacts || [];
     } catch (err) {
         console.error("Error fetching contacts:", err);
