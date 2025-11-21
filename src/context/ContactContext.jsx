@@ -1,4 +1,3 @@
-// context/ContactContext.jsx
 import { createContext, useContext, useState, useEffect } from "react";
 import {
   getContactsFromAPI,
@@ -29,11 +28,9 @@ export const ContactProvider = ({ children }) => {
 
   useEffect(() => {
     const init = async () => {
-      // Asegura agenda (esto evita errores al crear contactos)
       try {
         await ensureAgenda();
       } catch (e) {
-        // ignore
       }
       await fetchContacts();
     };
@@ -52,7 +49,6 @@ export const ContactProvider = ({ children }) => {
 
   const deleteContact = async (id) => {
     await deleteContactInAPI(id);
-    // eliminar localmente para una respuesta más rápida
     setContacts((prev) => prev.filter((c) => c.id !== id));
   };
 
