@@ -1,0 +1,86 @@
+.add-contact-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-contact-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.floating-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.floating-input input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.floating-input input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.floating-input label {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+  transition: all 0.2s;
+  background-color: white;
+  padding: 0 0.25rem;
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 2.2rem;
+  font-size: 0.75rem;
+  color: #3b82f6;
+}
+
+.floating-input .icon {
+  position: absolute;
+  left: 0.75rem;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
